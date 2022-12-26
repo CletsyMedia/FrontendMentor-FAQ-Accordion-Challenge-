@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Kumbh", sans-serif;
+}
+p, h3{
+    color:hsl(237, 12%, 33%);
+}
+:root{
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+}
+body{
+    background-image:linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+.imgbox{
+    width:800px;
+}
+.bgImg{
+    position: absolute;
+    top:-8rem;
+    left:-23rem;
+    width:720px;
+}
+.mail{
+    position: absolute;
+    width:180px;
+    left:13rem;
+    top:21.5rem;
+    z-index: 1;
+}
+.online{
+    left:-4rem;
+    top:8rem;
+    width:400px;
+    position: absolute;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.card{
+    background-color: #fff;
+    width:60rem;
+    height:35rem;
+    border-radius:20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.411);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap:1rem;
+}
+.card-description{
+    margin-right:5rem;
+    max-width:900px;
+}
+.card-faq h1{
+    margin-bottom: 2rem;
+}
+.faq-title{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    gap:1rem;  
+    width: 100%; 
+    margin-bottom:1rem;
+    transition: max-height .5s ease ;
+}
+.faq-title-head{
+    display: flex;
+    justify-content:space-between;
+    gap:2rem;
+    width: 100%;
+    cursor: pointer;
+}
+.faq-title-head h3:hover{
+    color:hsl(14, 88%, 65%);
+}
+.faq-title-head i{
+    color:hsl(14, 88%, 65%);
+    font-size: 0.9rem;
+    transition: all .5s ease;
+}
+.faq-title hr{
+    width: 100%;
+}
+.faq-text p{
+    line-height: 1.5;
+}
+.faq-text{
+    max-height:0;
+    overflow: hidden;
+    transition:max-height 1.4s ease;
+}
+.faq-active .faq-text{
+    max-height:10rem;
+}
+.faq-active i{
+    transform: rotate(180deg);
+}
+.faq-active h3{
+    color: black;
+}
+
+
+/* Responsiveness */
+@media only screen and (max-width:1440px) {
+    .mail {
+        width:100px;
+        left:12rem;
+        top:23rem;
+    }
+}
+@media only screen and (max-width:1024px) {
+    .online {
+        left:-4rem;
+        top:9rem;
+        width:380px;
+    }
+    .mail {
+        width:100px;
+        left:-1rem;
+        top:20rem;
+    }
+}
+@media only screen and (max-width:768px) {
+    .container{
+        height:55rem;
+    }
+    .card{
+        width:45rem;
+    } 
+    .card-title{
+        overflow:visible;
+        flex-direction: column;
+    }
+    .card-description {
+        margin-left:4rem;
+        margin-top:3rem;
+    } 
+    .bgImg {
+        top:-15rem;
+        left:11rem;
+        width:380px;
+    }
+    .online {
+        left:11rem;
+        top:-11rem;
+        width:380px;
+    }
+    .mail {
+        width:95px;
+        left:14rem;
+        top:8rem;
+    }
+    h3 {
+        font-size:1rem;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width:426px) {
+    .container{
+        height:60rem;
+    }
+    .card{
+        width: 24rem;
+        height: 40rem;
+    }
+    .mail {
+        width: 80px;
+        left:5rem;
+        top:8rem;
+    }
+    .card-description {
+        width:80%;
+    }
+    
+    .bgImg {
+        top:-12rem;
+        left:3rem;
+        width:300px;
+    }
+    .online {
+        left:3rem;
+        top:-9rem;
+        width:300px;
+    }
+    h1{
+        font-size:2.5rem;
+        text-align: center;
+        margin-bottom:2.5rem;
+        margin-top:2rem;
+    }
+    h3{
+        font-size:1rem;
+    }
+}
+@media only screen and (max-width:376px){
+    .card{
+        width: 21.5rem;
+        height: 40rem;
+    }
+    .mail {
+        width: 85px;
+        left:5rem;
+        top:8rem;
+    }
+    .bgImg {
+        top:-12rem;
+        left:1.5rem;
+        width:300px;
+    }
+    .online {
+        left:1.5rem;
+        top:-9rem;
+        width:300px;
+    }
+}
+@media only screen and (max-width:320px){
+    .card{
+        width:18rem;
+        height: 40rem;
+    }
+    .mail {
+        width: 85px;
+        left:2.5rem;
+    }
+    .bgImg {
+        top:-10rem;
+        left:1rem;
+        width:250px;
+    }
+    .online {
+        left:1rem;
+        top:-7.5rem;
+        width:250px;
+    }
+    h1{
+        font-size:1.7rem;
+    }
+}
